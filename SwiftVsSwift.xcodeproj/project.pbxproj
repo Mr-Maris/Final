@@ -9,20 +9,21 @@
 /* Begin PBXBuildFile section */
 		2E6CF28625E6640000371436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CF28525E6640000371436 /* AppDelegate.swift */; };
 		2E6CF28825E6640000371436 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CF28725E6640000371436 /* SceneDelegate.swift */; };
-		2E6CF28A25E6640000371436 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CF28925E6640000371436 /* ViewController.swift */; };
+		2E6CF28A25E6640000371436 /* GettingReadyTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CF28925E6640000371436 /* GettingReadyTableVC.swift */; };
 		2E6CF28D25E6640000371436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6CF28B25E6640000371436 /* Main.storyboard */; };
 		2E6CF29025E6640000371436 /* SwiftVsSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CF28E25E6640000371436 /* SwiftVsSwift.xcdatamodeld */; };
 		2E6CF29225E6640100371436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6CF29125E6640100371436 /* Assets.xcassets */; };
 		2E6CF29525E6640100371436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6CF29325E6640100371436 /* LaunchScreen.storyboard */; };
 		2E6CF2D525E70AA800371436 /* ColorsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CF2D425E70AA800371436 /* ColorsTableVC.swift */; };
 		2E6CF2D925E70D7400371436 /* ColorsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6CF2D825E70D7400371436 /* ColorsDetailVC.swift */; };
+		2E87381F25E87E290004B8E8 /* TaxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87381E25E87E290004B8E8 /* TaxVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E6CF28225E6640000371436 /* SwiftVsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftVsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6CF28525E6640000371436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E6CF28725E6640000371436 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2E6CF28925E6640000371436 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E6CF28925E6640000371436 /* GettingReadyTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingReadyTableVC.swift; sourceTree = "<group>"; };
 		2E6CF28C25E6640000371436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E6CF28F25E6640000371436 /* SwiftVsSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftVsSwift.xcdatamodel; sourceTree = "<group>"; };
 		2E6CF29125E6640100371436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		2E6CF29625E6640100371436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E6CF2D425E70AA800371436 /* ColorsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableVC.swift; sourceTree = "<group>"; };
 		2E6CF2D825E70D7400371436 /* ColorsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsDetailVC.swift; sourceTree = "<group>"; };
+		2E87381E25E87E290004B8E8 /* TaxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +95,10 @@
 		2E6CF2A025E6652A00371436 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2E6CF28925E6640000371436 /* ViewController.swift */,
 				2E6CF2D425E70AA800371436 /* ColorsTableVC.swift */,
 				2E6CF2D825E70D7400371436 /* ColorsDetailVC.swift */,
+				2E6CF28925E6640000371436 /* GettingReadyTableVC.swift */,
+				2E87381E25E87E290004B8E8 /* TaxVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,8 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E87381F25E87E290004B8E8 /* TaxVC.swift in Sources */,
 				2E6CF29025E6640000371436 /* SwiftVsSwift.xcdatamodeld in Sources */,
-				2E6CF28A25E6640000371436 /* ViewController.swift in Sources */,
+				2E6CF28A25E6640000371436 /* GettingReadyTableVC.swift in Sources */,
 				2E6CF28625E6640000371436 /* AppDelegate.swift in Sources */,
 				2E6CF28825E6640000371436 /* SceneDelegate.swift in Sources */,
 				2E6CF2D525E70AA800371436 /* ColorsTableVC.swift in Sources */,

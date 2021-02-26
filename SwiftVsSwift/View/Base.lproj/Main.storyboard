@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y1l-hm-DiU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ggj-Yg-Zpc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -53,6 +53,93 @@
             </objects>
             <point key="canvasLocation" x="1747.826086956522" y="116.51785714285714"/>
         </scene>
+        <!--TAX-->
+        <scene sceneID="iJM-3k-KLJ">
+            <objects>
+                <navigationController id="AaZ-yY-X2Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TAX" selectedImage="cursorarrow.motionlines" catalog="system" id="XG9-If-KH6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="GUz-6G-hag">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BWA-id-iuS" kind="relationship" relationship="rootViewController" id="RbD-bS-Mlv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ds8-yC-v6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="850"/>
+        </scene>
+        <!--Calculate tax-->
+        <scene sceneID="ywg-W6-FJb">
+            <objects>
+                <viewController id="BWA-id-iuS" customClass="TaxVC" customModule="SwiftVsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="asu-0d-3z2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33 eur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CE-TX-qAc">
+                                <rect key="frame" x="59" y="264" width="298" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZZ-QM-sq8">
+                                <rect key="frame" x="58" y="403" width="298" height="34"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-hH-CYh">
+                                <rect key="frame" x="58" y="558" width="296" height="91"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="tmz-jV-2LJ"/>
+                                </constraints>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateTotalPrice:" destination="BWA-id-iuS" eventType="touchUpInside" id="k0z-fa-tNd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sales tax" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ETM-n4-69k">
+                                <rect key="frame" x="56" y="480" width="298" height="34"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lfG-l4-aIg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ETM-n4-69k" firstAttribute="leading" secondItem="lfG-l4-aIg" secondAttribute="leading" constant="56" id="2nD-Wj-A6b"/>
+                            <constraint firstItem="vZZ-QM-sq8" firstAttribute="centerX" secondItem="asu-0d-3z2" secondAttribute="centerX" id="CSA-fJ-oVb"/>
+                            <constraint firstItem="4CE-TX-qAc" firstAttribute="leading" secondItem="lfG-l4-aIg" secondAttribute="leading" constant="59" id="Nkg-hS-n5b"/>
+                            <constraint firstItem="lfG-l4-aIg" firstAttribute="trailing" secondItem="ETM-n4-69k" secondAttribute="trailing" constant="60" id="R5F-KG-sZV"/>
+                            <constraint firstItem="vZZ-QM-sq8" firstAttribute="leading" secondItem="ATA-hH-CYh" secondAttribute="leading" id="Sfk-DF-Xhn"/>
+                            <constraint firstItem="ATA-hH-CYh" firstAttribute="top" secondItem="ETM-n4-69k" secondAttribute="bottom" constant="44" id="VQb-mn-Dsn"/>
+                            <constraint firstItem="4CE-TX-qAc" firstAttribute="top" secondItem="lfG-l4-aIg" secondAttribute="top" constant="124" id="ZUG-Ws-AHJ"/>
+                            <constraint firstItem="vZZ-QM-sq8" firstAttribute="leading" secondItem="lfG-l4-aIg" secondAttribute="leading" constant="58" id="cD6-UW-F9U"/>
+                            <constraint firstItem="lfG-l4-aIg" firstAttribute="trailing" secondItem="4CE-TX-qAc" secondAttribute="trailing" constant="57" id="cOf-WQ-nno"/>
+                            <constraint firstItem="ETM-n4-69k" firstAttribute="top" secondItem="vZZ-QM-sq8" secondAttribute="bottom" constant="43" id="eIS-yc-Gma"/>
+                            <constraint firstItem="lfG-l4-aIg" firstAttribute="bottom" secondItem="ATA-hH-CYh" secondAttribute="bottom" constant="164" id="klc-q6-iCY"/>
+                            <constraint firstItem="ETM-n4-69k" firstAttribute="trailing" secondItem="ATA-hH-CYh" secondAttribute="trailing" id="vah-IW-Z29"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calculate tax" id="ybh-yu-wWY"/>
+                    <connections>
+                        <outlet property="PriceTxt" destination="vZZ-QM-sq8" id="lcd-wf-t73"/>
+                        <outlet property="SalesTaxtxt" destination="ETM-n4-69k" id="TKL-S7-dXs"/>
+                        <outlet property="totalPricelbl" destination="4CE-TX-qAc" id="MOk-EH-uVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJF-4V-Qsq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740.5797101449277" y="849.77678571428567"/>
+        </scene>
         <!--Colors DetailVC-->
         <scene sceneID="T6v-rg-utH">
             <objects>
@@ -67,12 +154,101 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZC-AV-lqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2706" y="117"/>
+            <point key="canvasLocation" x="2707" y="117"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="l48-Hx-8SC">
+            <objects>
+                <tabBarController id="Ggj-Yg-Zpc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XVa-yP-71d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Y1l-hm-DiU" kind="relationship" relationship="viewControllers" id="Nt6-f3-Iwl"/>
+                        <segue destination="c0P-8I-QQt" kind="relationship" relationship="viewControllers" id="LAS-T6-seq"/>
+                        <segue destination="AaZ-yY-X2Z" kind="relationship" relationship="viewControllers" id="ofz-UE-V1N"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gc-vp-cFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75" y="117"/>
+        </scene>
+        <!--Getting Ready-->
+        <scene sceneID="lhz-iL-fm1">
+            <objects>
+                <tableViewController id="Fqm-RH-Ocg" customClass="GettingReadyTableVC" customModule="SwiftVsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Idk-v6-DEG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shoppingCell" textLabel="fNV-eI-XZl" detailTextLabel="FM1-ej-VOE" style="IBUITableViewCellStyleSubtitle" id="3kq-nl-Vqd">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3kq-nl-Vqd" id="s1u-RO-uUX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fNV-eI-XZl">
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FM1-ej-VOE">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fqm-RH-Ocg" id="rjG-MJ-rLp"/>
+                            <outlet property="delegate" destination="Fqm-RH-Ocg" id="kMz-MR-s6w"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Getting Ready" id="p0G-fI-YmI">
+                        <barButtonItem key="rightBarButtonItem" image="suit.heart.fill" catalog="system" id="gPi-5H-6wo">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="addNewItemTapped:" destination="Fqm-RH-Ocg" id="qft-Jn-FUx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G09-Ox-pQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741" y="-593"/>
+        </scene>
+        <!--Getting Ready-->
+        <scene sceneID="LST-Oq-9Sc">
+            <objects>
+                <navigationController id="c0P-8I-QQt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Getting Ready" selectedImage="heart.fill" catalog="system" id="lJs-KO-bk5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="uME-kV-Ra2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Fqm-RH-Ocg" kind="relationship" relationship="rootViewController" id="dm3-4X-BpE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oho-F8-CfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="-593"/>
+        </scene>
+        <!--Colors-->
         <scene sceneID="Aag-mW-XiN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y1l-hm-DiU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Colors" selectedImage="paintbrush.fill" catalog="system" id="V1l-UT-HhU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="y1h-Vi-8AH">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -85,12 +261,22 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xi0-bI-caV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837.68115942028987" y="116.51785714285714"/>
+            <point key="canvasLocation" x="851" y="117"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cursorarrow.motionlines" catalog="system" width="128" height="121"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="paintbrush.fill" catalog="system" width="122" height="128"/>
+        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
